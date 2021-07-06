@@ -25,12 +25,18 @@ ng g component product-list
 ng g component product-detail
 ```
 
-```shell
+# 構成の見直し
 
+## product module
+
+```shell
+ng g module product
 ```
 
-```shell
+## product routing
 
+```shell
+ng g module product --routing
 ```
 
 ```shell
