@@ -19,8 +19,10 @@ ng g component common/navbar
 ng g component product-list
 ```
 
-```shell
+# product-detail
 
+```shell
+ng g component product-detail
 ```
 
 ```shell

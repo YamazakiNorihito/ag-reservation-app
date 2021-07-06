@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
+  productList : Number[] = [1,2,3,4];
+
   constructor() { }
 
   ngOnInit(): void {
