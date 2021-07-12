@@ -1,0 +1,17 @@
+
+<div class="container">
+  <br/>
+  <div class="row">
+    <div class="col" *ngFor="let product of productList; let productid = index">
+      <a routerLink='{{productid}}'>
+        <div class="card" style="width: 15rem;">
+          <img src="{{product.coverImage}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-title">{{product.name}}</p>
+            <p class="card-text">{{product.description}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
