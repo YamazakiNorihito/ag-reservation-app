@@ -46,6 +46,18 @@ class FakeDB{
     ]
   }
 
+  async initDb()
+  {
+    await this.cleanDb()
+    this.pushProductsToDb();
+  }
+
+
+  async cleanDb(){
+    await Product.deleteMany({})
+  }
+
+
   pushProductsToDb(){
     this.products.forEach(
       (q) => {
@@ -54,11 +66,6 @@ class FakeDB{
       }
     )
   }
-
-  seeDb() {
-    this.pushProductsToDb();
-  }
-
 }
 
 module.exports = FakeDB;
