@@ -39,8 +39,36 @@ ng g module product
 ng g module product --routing
 ```
 
-```shell
+# node server api
 
+## install
+
+https://expressjs.com/ja/
+
+```shell
+npm install express --save
+```
+
+_server runnig proguram_
+
+ファイル
+
+- src/ag-reservation-app/server/index.js
+
+```node
+const express = require("express");
+
+const app = express();
+
+app.listen("3001", function () {
+  console.log("I am running");
+});
+```
+
+server excute command
+
+```shell
+node index.js
 ```
 
 ```shell
