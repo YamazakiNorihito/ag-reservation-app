@@ -71,8 +71,24 @@ server excute command
 node index.js
 ```
 
-```shell
+# MongoDB
 
+https://www.mongodb.com/
+
+MongoDB Atlas を利用します。
+
+## アカウント作成
+
+## Data Storage Create
+
+// TODO 後で作成手順
+
+## node.js mongod connect
+
+https://mongoosejs.com/docs/
+
+```shell
+ npm install mongoose
 ```
 
 ```shell
