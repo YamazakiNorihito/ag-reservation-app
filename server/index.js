@@ -1,12 +1,26 @@
 // node.js express server
 const express = require('express')
-
 // mongo db
 const mongoose = require('mongoose')
-
+// config
 const config = require('./config/dev')
+// fakedb
+const FakeDb = require('./fake-db')
 
-mongoose.connect(config.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+
+mongoose.connect(config.DB_URI,
+                {
+                  useNewUrlParser: true,
+                  useUnifiedTopology: true
+                }
+        ).then(
+          () => {
+            const fakedb = new FakeDb()
+            fakedb.seeDb()
+          }
+        )
+
+;
 
 const app = express()
 
