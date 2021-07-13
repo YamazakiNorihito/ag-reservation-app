@@ -6,7 +6,8 @@ const mongoose = require('mongoose')
 const config = require('./config/dev')
 // fakedb
 const FakeDb = require('./fake-db')
-
+// routes
+const productRoutes = require('./routes/products')
 
 mongoose.connect(config.DB_URI,
                 {
@@ -24,13 +25,9 @@ mongoose.connect(config.DB_URI,
 
 const app = express()
 
-app.get('/products',function(req,res){
-  res.json({'success':true});
-})
-
+app.use('/api/v1/products', productRoutes)
 
 const PORT = process.env.PORT || '3001'
-
 app.listen(PORT,function(){
   console.log('I am running')
 })
