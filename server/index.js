@@ -4,10 +4,9 @@ const express = require('express')
 // mongo db
 const mongoose = require('mongoose')
 
+const config = require('./config/dev')
 
-const mongoPw = 'testtest'
-const mongoDbconnectstring = `mongodb+srv://test:${mongoPw}@cluster0.h9m65.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-mongoose.connect(mongoDbconnectstring, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(config.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const app = express()
 
