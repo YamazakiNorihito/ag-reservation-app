@@ -126,8 +126,13 @@ https://hsmtweb.com/angular/angular-cli-proxy.html
    1. "Activity" tag open
    2. 本番環境で"npm run build --prod"で実行されるため packeg.json の build を変更する
    3. npm,node のバージョンが一致しないかの可能性あるので、package.json "engines"を追記
-
-package.json
+8. deploy アプリケーションスタートは npm start を使う。server 側の node.js を動かしたいので、package.json 修正
+   package.json
+9. server node.js project add(※１)
+   1. src/ag-reservation-app/server/package.json を修正（※2）
+   2. ローカル環境で確認
+      1. npm start
+         →localhost:3001
 
 ```json
   "engines" :{
@@ -135,16 +140,38 @@ package.json
     "npm":"[cmd npm -v の値]"
   },
   "scripts": {
+    "start": "npm run start --prefix server",
     "build": "ng build --configuration production",
   },
 ```
 
 ```shell
 node -v
+npm -v
 ```
 
-```shell
+- server dir で下記のコマンド実行（※１）
 
+```shell
+npm init
+# すべて空白でOK
+```
+
+- /server/package.json（※2）
+
+```json
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
 ```
 
 ```shell
