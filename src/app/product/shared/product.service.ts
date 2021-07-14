@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  URI :string = '/api/v1/products';
+  URI :string = '/api/v1/products/';
 
 
   constructor(private http:HttpClient) { }
@@ -19,7 +19,7 @@ export class ProductService {
     return this.http.get(this.URI);
   }
 
-  findyId(id : number) : any{
-    return MockDataProducts[id];
+  findyId(id : string) : Observable<any>{
+    return this.http.get(this.URI + `${id}`);
   }
 }
