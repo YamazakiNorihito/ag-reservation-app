@@ -16,7 +16,9 @@ export class ProductListingsComponent implements OnInit {
     let ProductObservable = this.productService.getProducts();
 
     ProductObservable.subscribe(
-      (data) => {console.log('成功')},
+      (data) => {
+        this.productList = data;
+      },
       (err) => {console.log('エラー')},
       () => {console.log('完了')}
     )
