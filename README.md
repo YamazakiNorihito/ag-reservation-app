@@ -133,6 +133,10 @@ https://hsmtweb.com/angular/angular-cli-proxy.html
    2. ローカル環境で確認
       1. npm start
          →localhost:3001
+10. 機密情報は HEROKU に設定
+    1. Deploy → setting → config Vars
+       1. KEY: DB_URI
+       2. VALUE mongodb+srv://test:testtest@cluster0.h9m65.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 ```json
   "engines" :{
