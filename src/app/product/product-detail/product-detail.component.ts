@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {MockDataProducts} from '../mock-data-products'
+import { ProductService } from '../shared/product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,11 +10,12 @@ import {MockDataProducts} from '../mock-data-products'
 export class ProductDetailComponent implements OnInit {
 
   product : any;
-  constructor(private activateRoute:ActivatedRoute) { }
+  constructor(private activateRoute:ActivatedRoute
+              ,private productService :ProductService) { }
 
   ngOnInit(): void {
     this.activateRoute.paramMap.subscribe(param => {
-      this.product = MockDataProducts[+param.get('productId')!]
+      this.product = this.productService.findyId(+param.get('productId')!);
     })
   }
 

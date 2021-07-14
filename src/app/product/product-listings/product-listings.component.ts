@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
-import {MockDataProducts} from '../mock-data-products'
+import { ProductService } from '../shared/product.service';
 
 @Component({
   selector: 'app-product-listings',
@@ -10,11 +8,18 @@ import {MockDataProducts} from '../mock-data-products'
 })
 export class ProductListingsComponent implements OnInit {
 
-  productList : any = MockDataProducts;
+  productList : any;
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    let ProductObservable = this.productService.getProducts();
+
+    ProductObservable.subscribe(
+      (data) => {console.log('成功')},
+      (err) => {console.log('エラー')},
+      () => {console.log('完了')}
+    )
   }
 
 }

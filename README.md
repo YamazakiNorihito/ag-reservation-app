@@ -91,9 +91,17 @@ https://mongoosejs.com/docs/
  npm install mongoose
 ```
 
-```shell
+# server client join
 
+## service add
+
+```shell
+ng g service product/shared/product
 ```
+
+## cros site
+
+https://hsmtweb.com/angular/angular-cli-proxy.html
 
 ```shell
 
