@@ -136,7 +136,7 @@ https://hsmtweb.com/angular/angular-cli-proxy.html
 10. 機密情報は HEROKU に設定
     1. Deploy → setting → config Vars
        1. KEY: DB_URI
-       2. VALUE mongodb+srv://test:testtest@cluster0.h9m65.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+       2. VALUE mongodb+srv://[id/pw]@cluster0.h9m65.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 ```json
   "engines" :{
@@ -178,50 +178,9 @@ npm init
 }
 ```
 
-```shell
+## デザインバージョンアップ
 
-```
+https://www.creative-tim.com/product/paper-kit-2-angular
 
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
+上記のから AngularProject デザインを DL して、
+自身のプロジェクトへ移植する。
