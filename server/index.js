@@ -18,9 +18,9 @@ mongoose.connect(config.DB_URI,
                 }
         ).then(
           () => {
-            if(ProcessingInstruction.env.MODE_ENV !== 'production'){
+            if(process.env.MODE_ENV !== 'production'){
               const fakedb = new FakeDb()
-              //fakedb.initDb()   // 必要な時に初期化
+              fakedb.initDb()   // 必要な時に初期化
             }
           }
         )
@@ -30,7 +30,7 @@ const app = express()
 
 app.use('/api/v1/products', productRoutes)
 
-if(ProcessingInstruction.env.MODE_ENV === 'production'){
+if(process.env.MODE_ENV === 'production'){
   const appPath = path.join(__dirname,'..','dist','ag-reservation-app')
   app.use(express.static(appPath))
   app.get("*", function(req,res){
