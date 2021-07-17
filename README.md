@@ -184,3 +184,39 @@ https://www.creative-tim.com/product/paper-kit-2-angular
 
 上記のから AngularProject デザインを DL して、
 自身のプロジェクトへ移植する。
+
+# ログイン・会員登録
+
+## ログイン
+
+```shell
+ng g component auth/login
+```
+
+## 会員登録
+
+```shell
+ng g component auth/register
+```
+
+## 権限
+
+```shell
+ng g component auth
+```
+
+```shell
+ng g module auth
+```
+
+```shell
+ng g service auth/shared/auth
+```
+
+```shell
+
+```
+
+```shell
+
+```

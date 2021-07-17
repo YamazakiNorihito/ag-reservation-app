@@ -5,8 +5,6 @@ import { ProductListingsComponent } from './product-listings/product-listings.co
 import {ProductRoutingModule} from './product-routing.module'
 import {ProductService} from './shared/product.service'
 
-
-
 @NgModule({
   declarations: [
     ProductDetailComponent,
