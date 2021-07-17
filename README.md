@@ -187,19 +187,21 @@ https://www.creative-tim.com/product/paper-kit-2-angular
 
 # ログイン・会員登録
 
-## ログイン
+## client
+
+### ログイン
 
 ```shell
 ng g component auth/login
 ```
 
-## 会員登録
+### 会員登録
 
 ```shell
 ng g component auth/register
 ```
 
-## 権限
+### 権限
 
 ```shell
 ng g component auth
@@ -213,10 +215,38 @@ ng g module auth
 ng g service auth/shared/auth
 ```
 
-```shell
+## server
 
+### body-parser
+
+https://www.npmjs.com/package/body-parser
+
+node.js express のバージョンによってインストール不要
+https://qiita.com/hirochan/items/e63d74cb70f0b97889fc
+express にすでに含まれている
+
+```shell
+npm install body-parser
 ```
 
-```shell
+### docker node.js debug with vscode
 
+launch.json
+
+```json
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/ag-reservation-app/server/index.js"
+    }
+  ]
+}
 ```

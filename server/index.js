@@ -11,6 +11,8 @@ const productRoutes = require("./routes/products");
 const userRoutes = require("./routes/users");
 // path
 const path = require("path");
+// body-parser
+const bodyParser = require("body-parser");
 
 mongoose
   .connect(config.DB_URI, {
@@ -26,6 +28,9 @@ mongoose
   });
 
 const app = express();
+// parse application/json
+app.use(express.urlencoded({ extended: true })); //Parse URL-encoded bodies
+app.use(express.json());
 
 app.use("/api/v1/products", productRoutes);
 app.use("/api/v1/users", userRoutes);
