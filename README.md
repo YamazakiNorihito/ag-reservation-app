@@ -260,9 +260,20 @@ https://www.npmjs.com/package/bcrypt
 npm i bcrypt
 ```
 
-```shell
+### jwt
 
+JSON データに署名や暗号化を施す方法を定めたオープン標準 (RFC 7519) である
+https://jwt.io/
+
+_installer_
+https://www.npmjs.com/package/jsonwebtoken
+
+```shell
+npm i jsonwebtoken
 ```
+
+_Encryption Key Generator _
+https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
 
 ```shell
 

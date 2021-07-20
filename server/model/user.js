@@ -22,6 +22,12 @@ const UserSchema = new Schema({
   },
 });
 
+// function create add
+UserSchema.methods.hasSamePassword = function (password) {
+  const user = this;
+  return bcrypt.compareSync(password, user.password);
+};
+
 UserSchema.pre("save", function (next) {
   let user = this;
   const saltRounds = 10;
