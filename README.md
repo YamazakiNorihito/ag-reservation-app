@@ -250,3 +250,36 @@ launch.json
   ]
 }
 ```
+
+### pw 暗号化
+
+_bcrypt_
+https://www.npmjs.com/package/bcrypt
+
+```shell
+npm i bcrypt
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```

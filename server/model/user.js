@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const bcrypt = require("bcrypt");
 
 const UserSchema = new Schema({
   name: {
@@ -19,6 +20,18 @@ const UserSchema = new Schema({
     min: [6, "パスワード6文字以上で入力してください。"],
     max: [10, "パスワード最大10文字までです"],
   },
+});
+
+UserSchema.pre("save", function (next) {
+  let user = this;
+  const saltRounds = 10;
+  bcrypt.genSalt(saltRounds, function (err, salt) {
+    bcrypt.hash(user.password, salt, function (err, hash) {
+      // Store hash in your password DB.
+      user.password = hash;
+      next();
+    });
+  });
 });
 
 module.exports = mongoose.model("User", UserSchema);
