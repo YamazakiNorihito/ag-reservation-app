@@ -7,10 +7,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  register(userdata:any) :Observable<any>{
+  register(userdata: any): Observable<any> {
     return this.http.post('/api/v1/users/register', userdata)
   }
 
+  login(userdata: any): Observable<any> {
+    return this.http.post('/api/v1/users/login', userdata)
+  }
 }

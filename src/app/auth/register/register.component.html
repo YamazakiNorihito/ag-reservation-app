@@ -54,10 +54,9 @@
 					</div>
 				</form>
 
-        <div *ngIf="errors && errors.length>0">
+        <div *ngIf="errors && errors.length>0"  class="alert alert-danger" role="alert">
           <p *ngFor="let err of errors">{{err.detail}}</p>
         </div>
-
 
 			</div>
 			<div class="card-footer">
