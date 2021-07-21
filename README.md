@@ -275,9 +275,15 @@ npm i jsonwebtoken
 _Encryption Key Generator _
 https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
 
-```shell
+angular jwt
+https://www.npmjs.com/package/@auth0/angular-jwt
 
+```shell
+npm i @auth0/angular-jwt
 ```
+
+moment.js
+https://www.npmjs.com/package/moment
 
 ```shell
 

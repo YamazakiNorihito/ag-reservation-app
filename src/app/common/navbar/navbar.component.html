@@ -3,18 +3,31 @@
     <a class="navbar-brand" href="/">
       <h1>Reservation</h1>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['login']">ログイン</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" [routerLink]="['register']">新規登録</a>
-        </li>
-      </ul>
-    </div>
+
+    <ng-container *ngIf="!auth.isAuthenticated(); else createLabel">
+      <div name="A" class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" [routerLink]="['login']">ログイン</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['register']">新規登録</a>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+    <ng-template #createLabel>
+      <div name="B" class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <button class="stretched-link text-danger" (click)="Logout()">ログアウト</button>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
   </div>
 </nav>

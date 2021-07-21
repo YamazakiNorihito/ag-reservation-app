@@ -154,7 +154,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-"@angular/common@~12.0.5", "@angular/common@12.0.5":
+"@angular/common@>=9.0.0", "@angular/common@~12.0.5", "@angular/common@12.0.5":
   "integrity" "sha512-jKiPjWVL3jXVKgXwINlsF5O0r9gX/mAoa5UVy57O8jcg+ENbH9LLSOikgiF/0HPxk2uvRV5OYmbBgOY1xT41kQ=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-12.0.5.tgz"
   "version" "12.0.5"
@@ -222,6 +222,13 @@
   "version" "12.0.5"
   dependencies:
     "tslib" "^2.1.0"
+
+"@auth0/angular-jwt@^5.0.2":
+  "integrity" "sha512-rSamC9mu+gUxoR86AXcIo+KD7xRIro+/iu1F2Ld85YAZEVKlpB5vYG+g0yGaEOqjtQWP/i0H6fi6XMGPVHSYYQ=="
+  "resolved" "https://registry.npmjs.org/@auth0/angular-jwt/-/angular-jwt-5.0.2.tgz"
+  "version" "5.0.2"
+  dependencies:
+    "tslib" "^2.0.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.14.5":
   "integrity" "sha512-9pzDqyc6OLDaqe+zbACgFkb6fKMNG6CObKpnYXChRsvYGyEdc7CA2BaqeOM+vOtCS5ndmJicPJhKAwYRI6UfFw=="
@@ -5014,6 +5021,11 @@
   "integrity" "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw=="
   "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
   "version" "1.0.4"
+
+"moment@^2.29.1":
+  "integrity" "sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ=="
+  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz"
+  "version" "2.29.1"
 
 "mongodb@3.6.8":
   "integrity" "sha512-sDjJvI73WjON1vapcbyBD3Ao9/VN3TKYY8/QX9EPbs22KaCSrQ5rXo5ZZd44tWJ3wl3FlnrFZ+KyUtNH6+1ZPQ=="
