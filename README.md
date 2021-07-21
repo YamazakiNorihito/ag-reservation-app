@@ -286,11 +286,11 @@ moment.js
 https://www.npmjs.com/package/moment
 
 ```shell
-
+npm i moment
 ```
 
 ```shell
-
+ng g interceptor auth/shared/token
 ```
 
 ```shell
